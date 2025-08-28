@@ -27,9 +27,9 @@ function App() {
       </main>
       
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-charcoal text-gray-300 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <img 
@@ -41,37 +41,37 @@ function App() {
                     target.style.display = 'none';
                   }}
                 />
-                <span className="font-bold text-lg">Fernhardt's Masonry</span>
+                <span className="font-bold text-xl text-white">Fernhardt's Masonry</span>
               </div>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-400 mb-6 leading-relaxed">
                 Expert masonry repair and restoration services throughout the Lower Mainland and Vancouver Island.
               </p>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-silver font-medium">
                WCB Compliant
               </p>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Quick Links</h3>
-              <div className="space-y-2">
-                <a href="#services" className="block text-gray-300 hover:text-white transition-colors">Services</a>
-                <a href="#pricing" className="block text-gray-300 hover:text-white transition-colors">Pricing</a>
-                <a href="#gallery" className="block text-gray-300 hover:text-white transition-colors">Gallery</a>
-                <a href="#contact" className="block text-gray-300 hover:text-white transition-colors">Contact</a>
+              <h3 className="font-semibold mb-6 text-white text-lg">Quick Links</h3>
+              <div className="space-y-3">
+                <a href="#services" className="block text-gray-400 hover:text-silver transition-colors duration-200">Services</a>
+                <a href="#pricing" className="block text-gray-400 hover:text-silver transition-colors duration-200">Pricing</a>
+                <a href="#gallery" className="block text-gray-400 hover:text-silver transition-colors duration-200">Gallery</a>
+                <a href="#contact" className="block text-gray-400 hover:text-silver transition-colors duration-200">Contact</a>
               </div>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Contact Info</h3>
-              <div className="space-y-2 text-gray-300">
-                <p>Phone: <span className="text-gray-400">[Protected - Click "Reveal Phone" above]</span></p>
-                <p>Email: <span className="text-gray-400">[Protected - Click "Reveal Email" above]</span></p>
-                <p>Vancouver, BC V5K </p>
+              <h3 className="font-semibold mb-6 text-white text-lg">Contact Info</h3>
+              <div className="space-y-3 text-gray-400">
+                <p>Phone: <span className="text-silver">[Protected - Click "Reveal Phone" above]</span></p>
+                <p>Email: <span className="text-silver">[Protected - Click "Reveal Email" above]</span></p>
+                <p>Vancouver, BC V5K</p>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-gray-700 pt-8 mt-8 text-center text-gray-400">
+          <div className="border-t border-stone/30 pt-8 mt-12 text-center text-gray-500">
             <p>&copy; 2025 Fernhardt's Masonry. All rights reserved.</p>
           </div>
         </div>

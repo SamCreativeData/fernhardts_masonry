@@ -69,7 +69,7 @@ export default function ObfuscatedContact({ label, type, b64, className }: Props
           onClick={onReveal}
           disabled={!guardReady}
           aria-label={`Reveal ${label}`}
-          className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:border-gray-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+          className="inline-flex items-center gap-2 rounded-xl border border-marble px-6 py-3 text-sm font-semibold text-stone hover:bg-silver/10 hover:border-silver disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm hover:shadow-md"
           whileTap={{ scale: 0.98 }}
           whileHover={{ scale: 1.02 }}
         >
@@ -84,10 +84,10 @@ export default function ObfuscatedContact({ label, type, b64, className }: Props
           transition={{ duration: 0.3 }}
         >
           <div className="flex items-center gap-2">
-            <Icon className="h-4 w-4 text-blue-600" />
+            <Icon className="h-5 w-5 text-silver" />
             <span 
               role="status" 
-              className="font-medium tracking-wide select-text text-gray-900"
+              className="font-semibold tracking-wide select-text text-charcoal text-lg"
               style={{ 
                 fontFamily: 'monospace',
                 letterSpacing: '0.5px'
@@ -102,7 +102,7 @@ export default function ObfuscatedContact({ label, type, b64, className }: Props
               type="button"
               onClick={onCopy}
               aria-label="Copy to clipboard"
-              className="rounded-md border border-gray-300 px-2 py-1 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
+              className="rounded-lg border border-marble px-3 py-2 text-stone hover:bg-silver/10 hover:text-charcoal transition-colors duration-200"
               whileTap={{ scale: 0.95 }}
             >
               <Copy className="h-4 w-4" />
@@ -112,7 +112,7 @@ export default function ObfuscatedContact({ label, type, b64, className }: Props
               type="button"
               onClick={onOpen}
               aria-label={`Open ${type}`}
-              className="rounded-md border border-gray-300 px-2 py-1 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
+              className="rounded-lg border border-marble px-3 py-2 text-stone hover:bg-silver/10 hover:text-charcoal transition-colors duration-200"
               whileTap={{ scale: 0.95 }}
             >
               <ExternalLink className="h-4 w-4" />
@@ -126,7 +126,7 @@ export default function ObfuscatedContact({ label, type, b64, className }: Props
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
-          className="text-sm text-green-600 font-medium"
+          className="text-sm text-silver font-semibold"
         >
           Copied!
         </motion.span>
@@ -137,7 +137,7 @@ export default function ObfuscatedContact({ label, type, b64, className }: Props
       )}
       
       <noscript>
-        <span className="text-sm text-gray-500 italic">
+        <span className="text-sm text-stone/70 italic">
           Enable JavaScript to view contact info
         </span>
       </noscript>

@@ -36,13 +36,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 lg:py-20 bg-white">
+    <section id="services" className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6 leading-tight">
             Professional Masonry Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-stone max-w-3xl mx-auto leading-relaxed">
             Comprehensive masonry repair and restoration services for residential and commercial properties 
             throughout the Lower Mainland and Vancouver Island.
           </p>
@@ -52,15 +52,15 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-white border border-marble rounded-2xl p-8 shadow-md hover:shadow-xl hover:border-silver transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div className="text-blue-600 mb-4">
+              <div className="text-silver mb-6">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-2xl font-semibold text-charcoal mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-stone leading-relaxed text-lg">
                 {service.description}
               </p>
             </div>

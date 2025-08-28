@@ -117,10 +117,10 @@ export default function SimpleContactForm() {
   };
 
   return (
-    <div className="bg-gray-50 rounded-2xl p-8">
+    <div className="bg-marble-texture rounded-3xl p-10 shadow-lg border border-marble">
       <div className="flex items-center gap-2 mb-6">
-        <Shield className="h-5 w-5 text-green-600" />
-        <h3 className="text-2xl font-semibold text-gray-900">
+        <Shield className="h-6 w-6 text-silver" />
+        <h3 className="text-3xl font-semibold text-charcoal">
           Secure Contact Form
         </h3>
       </div>
@@ -129,9 +129,9 @@ export default function SimpleContactForm() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6"
+          className="bg-stone/5 border border-silver rounded-xl p-6 mb-6"
         >
-          <p className="text-green-800 font-medium">
+          <p className="text-charcoal font-semibold">
             Thank you! We'll contact you within 24 hours to discuss your project.
           </p>
         </motion.div>
@@ -141,9 +141,9 @@ export default function SimpleContactForm() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6"
+          className="bg-stone/5 border border-stone rounded-xl p-6 mb-6"
         >
-          <p className="text-red-800 font-medium">
+          <p className="text-charcoal font-semibold">
             There was an error submitting your form. Please try again.
           </p>
         </motion.div>
@@ -171,7 +171,7 @@ export default function SimpleContactForm() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-semibold text-charcoal mb-3">
               Full Name *
             </label>
             <input
@@ -181,13 +181,13 @@ export default function SimpleContactForm() {
               value={formData.name}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+              className="w-full px-4 py-3 border border-marble rounded-xl focus:ring-2 focus:ring-silver focus:border-silver transition-all duration-200 bg-white"
               placeholder="Enter your name"
             />
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-semibold text-charcoal mb-3">
               Email Address *
             </label>
             <input
@@ -197,14 +197,14 @@ export default function SimpleContactForm() {
               value={formData.email}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+              className="w-full px-4 py-3 border border-marble rounded-xl focus:ring-2 focus:ring-silver focus:border-silver transition-all duration-200 bg-white"
               placeholder="Enter your email"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="phone" className="block text-sm font-semibold text-charcoal mb-3">
             Phone Number (Optional)
           </label>
           <input
@@ -213,13 +213,13 @@ export default function SimpleContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+            className="w-full px-4 py-3 border border-marble rounded-xl focus:ring-2 focus:ring-silver focus:border-silver transition-all duration-200 bg-white"
             placeholder="(604) 555-0123"
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-semibold text-charcoal mb-3">
             Project Details *
           </label>
           <textarea
@@ -229,7 +229,7 @@ export default function SimpleContactForm() {
             onChange={handleInputChange}
             required
             rows={4}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+            className="w-full px-4 py-3 border border-marble rounded-xl focus:ring-2 focus:ring-silver focus:border-silver transition-all duration-200 bg-white resize-none"
             placeholder="Tell us about your masonry project, including any specific issues or requirements..."
           />
         </div>
@@ -237,7 +237,7 @@ export default function SimpleContactForm() {
         <motion.button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+          className="w-full bg-charcoal hover:bg-stone disabled:bg-stone/50 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-3 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
           whileTap={{ scale: 0.98 }}
         >
           {isSubmitting ? (
@@ -254,7 +254,7 @@ export default function SimpleContactForm() {
         </motion.button>
       </form>
       
-      <p className="text-sm text-gray-500 mt-4">
+      <p className="text-sm text-stone/70 mt-6">
         Protected with honeypot and time-trap anti-spam measures.
       </p>
     </div>

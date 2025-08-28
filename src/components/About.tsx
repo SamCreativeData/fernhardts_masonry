@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Clock, Palette, FileText } from 'lucide-react';
+import { Award, Clock, Palette, FileText } from 'lucide-react';
 
 const About = () => {
   const features = [
@@ -18,16 +18,16 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 lg:py-20 bg-white">
+    <section id="about" className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-8 leading-tight">
               About Fernhardt's Masonry
             </h2>
             
-            <div className="prose prose-lg text-gray-600 mb-8">
+            <div className="prose prose-lg text-stone mb-10 space-y-6">
               <p>
                 With over 25 years of experience serving the Lower Mainland and Vancouver Island, 
                 Fernhardt's Masonry is built on a foundation of exceptional craftsmanship, 
@@ -42,27 +42,27 @@ const About = () => {
             </div>
 
             {/* Features */}
-            <div className="space-y-4">
+            <div className="space-y-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="text-blue-600 flex-shrink-0 mt-1">
+                <div key={index} className="flex items-start space-x-4 p-4 rounded-lg bg-gray-50/50 border border-marble hover:bg-silver/5 transition-colors duration-200">
+                  <div className="text-silver flex-shrink-0 mt-1">
                     {feature.icon}
                   </div>
-                  <span className="text-gray-700 font-medium">{feature.text}</span>
+                  <span className="text-stone font-medium text-lg">{feature.text}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Image Placeholder */}
-          <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center min-h-[400px] border-2 border-dashed border-gray-300 lg:order-first">
+          <div className="bg-marble-texture rounded-3xl p-12 flex items-center justify-center min-h-[500px] border border-marble lg:order-first shadow-lg">
             <div className="text-center">
-              <Shield className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">Company Photo</h3>
-              <p className="text-gray-500">
+              <Award className="h-20 w-20 text-silver mx-auto mb-6" />
+              <h3 className="text-2xl font-semibold text-stone mb-3">Company Photo</h3>
+              <p className="text-stone/70">
                 Professional team or work site image
               </p>
-              <p className="text-sm text-gray-400 mt-2">
+              <p className="text-sm text-stone/50 mt-3">
                 TODO: Replace with actual company photo
               </p>
             </div>

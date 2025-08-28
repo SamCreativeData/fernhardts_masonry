@@ -34,11 +34,11 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled ? 'bg-white shadow-xl border-b border-marble' : 'bg-white/95 backdrop-blur-md'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-18 lg:h-22">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img 
@@ -50,7 +50,7 @@ const Navigation = () => {
                 target.style.display = 'none';
               }}
             />
-            <span className="font-bold text-lg lg:text-xl text-gray-900">
+            <span className="font-bold text-xl lg:text-2xl text-charcoal">
               Fernhardt's Masonry
             </span>
           </div>
@@ -61,14 +61,14 @@ const Navigation = () => {
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
+                className="text-stone hover:text-charcoal font-medium transition-colors duration-200 text-lg"
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={() => handleNavClick('#contact')}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-2xl font-medium transition-colors duration-200 flex items-center space-x-2"
+              className="bg-charcoal hover:bg-stone text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               <Phone className="h-4 w-4" />
               <span>Get a Quote</span>
@@ -78,7 +78,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-gray-900"
+            className="lg:hidden p-2 rounded-md text-stone hover:text-charcoal"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -86,20 +86,20 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
+          <div className="lg:hidden py-6 border-t border-marble bg-white/95 backdrop-blur-sm">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-left text-gray-700 hover:text-gray-900 font-medium py-2"
+                  className="text-left text-stone hover:text-charcoal font-medium py-3 text-lg"
                 >
                   {item.label}
                 </button>
               ))}
               <button
                 onClick={() => handleNavClick('#contact')}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl font-medium transition-colors duration-200 flex items-center justify-center space-x-2 mt-4"
+                className="bg-charcoal hover:bg-stone text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 mt-6 shadow-md"
               >
                 <Phone className="h-4 w-4" />
                 <span>Get a Quote</span>

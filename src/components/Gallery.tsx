@@ -33,30 +33,30 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-16 lg:py-20 bg-gray-50">
+    <section id="gallery" className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6 leading-tight">
             Our Work Gallery
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-stone max-w-3xl mx-auto leading-relaxed">
             See the difference our expert craftsmanship makes. Browse our portfolio of completed masonry projects.
           </p>
         </div>
 
         {/* Before/After Comparison Slider */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
+        <div className="mb-16">
+          <h3 className="text-3xl font-semibold text-charcoal mb-8 text-center">
             Before & After Comparison
           </h3>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto bg-marble-texture p-8 rounded-3xl shadow-lg border border-marble">
             <BeforeAfterSlider
               beforeImage="/before-example.jpg"
               afterImage="/after-example.jpg"
               beforeAlt="Masonry work before repair - damaged brick wall"
               afterAlt="Masonry work after repair - restored brick wall"
             />
-            <p className="text-center text-gray-600 mt-4">
+            <p className="text-center text-stone mt-6 font-medium">
               Drag the slider to see the transformation
             </p>
           </div>
@@ -67,7 +67,7 @@ const Gallery = () => {
           {galleryImages.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-marble hover:border-silver transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="aspect-w-4 aspect-h-3 bg-gray-200 relative overflow-hidden">
                 <img
@@ -79,13 +79,13 @@ const Gallery = () => {
                     target.src = 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg';
                   }}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 flex items-center justify-center">
-                  <Camera className="h-8 w-8 text-white opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-charcoal bg-opacity-0 hover:bg-opacity-20 transition-opacity duration-300 flex items-center justify-center">
+                  <Camera className="h-8 w-8 text-silver opacity-0 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
-              <div className="p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
-                <p className="text-sm text-gray-600">Professional masonry restoration</p>
+              <div className="p-6">
+                <h4 className="font-semibold text-charcoal mb-2 text-lg">{item.title}</h4>
+                <p className="text-sm text-stone">Professional masonry restoration</p>
               </div>
             </div>
           ))}
@@ -93,7 +93,7 @@ const Gallery = () => {
 
         {/* TODO Note */}
         <div className="mt-12 text-center">
-          <p className="text-gray-500 text-sm">
+          <p className="text-stone/60 text-sm">
             TODO: Replace placeholder images with actual project photos
           </p>
         </div>
