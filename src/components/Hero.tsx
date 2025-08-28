@@ -48,7 +48,7 @@ const Hero = () => {
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-marble">
             <div className="flex items-center justify-center space-x-4 text-stone">
               <Shield className="h-6 w-6 text-silver flex-shrink-0" />
-              <span className="font-semibold text-lg">25+ Years Experience</span>
+              <span className="font-semibold text-lg">15+ Years Experience</span>
               <div className="w-1 h-6 bg-marble"></div>
               <span className="font-medium">WCB Compliant</span>
             </div>
