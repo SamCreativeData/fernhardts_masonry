@@ -29,7 +29,7 @@ const About = () => {
             
             <div className="prose prose-lg text-stone mb-10 space-y-6">
               <p>
-                With over 25 years of experience serving the Lower Mainland and Vancouver Island, 
+                With over 15 years of experience serving the Lower Mainland and Vancouver Island, 
                 Fernhardt's Masonry is built on a foundation of exceptional craftsmanship, 
                 maintaining tidy work sites, and adhering to reliable schedules. We specialize 
                 in moisture management solutions specifically designed for coastal BC's unique climate challenges.
