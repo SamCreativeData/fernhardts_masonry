@@ -8,8 +8,8 @@ const Gallery = () => {
     {
       id: 1,
       title: 'Brick Repointing Project',
-      before: 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg',
-      after: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg',
+      before: 'https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/BBQBefore.jpg?raw=true',
+      after: 'https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/BBQAfter.jpg?raw=true',
       alt: 'Brick wall repointing before and after'
     },
     {
@@ -51,8 +51,8 @@ const Gallery = () => {
           </h3>
           <div className="max-w-4xl mx-auto bg-marble-texture p-8 rounded-3xl shadow-lg border border-marble">
             <BeforeAfterSlider
-              beforeImage="/before-example.jpg"
-              afterImage="/after-example.jpg"
+              beforeImage="https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/BBQBefore.jpg?raw=true"
+              afterImage="https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/BBQAfter.jpg?raw=true"
               beforeAlt="Masonry work before repair - damaged brick wall"
               afterAlt="Masonry work after repair - restored brick wall"
             />
