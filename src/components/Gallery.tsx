@@ -7,27 +7,27 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      title: 'Brick Repointing Project',
-      before: 'https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/BBQBefore.jpg?raw=true',
+      title: 'Walkway Repointing Project',
+      before: 'https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/repointing.jpg?raw=true',
       after: 'https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/BBQAfter.jpg?raw=true',
       alt: 'Brick wall repointing before and after'
     },
     {
       id: 2,
       title: 'Stone Façade Restoration',
-      image: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg',
+      image: 'https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/column.jpg?raw=true',
       alt: 'Restored stone façade masonry work'
     },
     {
       id: 3,
-      title: 'Chimney Repair',
-      image: 'https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg',
+      title: 'Veneer',
+      image: 'https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/veneerAfter.jpg?raw=true',
       alt: 'Professional chimney masonry repair'
     },
     {
       id: 4,
       title: 'Walkway Installation',
-      image: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg',
+      image: 'https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/walkway.jpg?raw=true',
       alt: 'Interlocking paver walkway installation'
     },
   ];
