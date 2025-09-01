@@ -94,7 +94,7 @@ const Gallery = () => {
         {/* TODO Note */}
         <div className="mt-12 text-center">
           <p className="text-stone/60 text-sm">
-            TODO: Replace placeholder images with actual project photos
+      
           </p>
         </div>
       </div>
