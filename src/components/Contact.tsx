@@ -5,8 +5,8 @@ import SimpleContactForm from './SimpleContactForm';
 
 const Contact = () => {
   // Obfuscated contact values - Base64 encoded and chunked
-  // Phone: (627) 513-6173 -> Base64 -> chunked
-  const phoneB64 = "KDYyNykgNTEzLTYxNzM=";
+  // Phone: (672) 513-6173 -> Base64 -> chunked
+  const phoneB64 = "KDY3MikgNTEzLTYxNzM=";
   // Email: fernhardts.masonry@gmail.com -> Base64 -> chunked  
   const emailB64 = "ZmVybmhhcmR0cy5tYXNv.bnJ5QGdtYWlsLmNvbQ==";
 
