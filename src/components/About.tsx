@@ -55,18 +55,14 @@ const About = () => {
           </div>
 
           {/* Image Placeholder */}
-          <div className="bg-marble-texture rounded-3xl p-12 flex items-center justify-center min-h-[500px] border border-marble lg:order-first shadow-lg">
-            <div className="text-center">
-              <Award className="h-20 w-20 text-silver mx-auto mb-6" />
-              <h3 className="text-2xl font-semibold text-stone mb-3">Company Photo</h3>
-              <p className="text-stone/70">
-                Professional team or work site image
-              </p>
-              <p className="text-sm text-stone/50 mt-3">
-                TODO: Replace with actual company photo
-              </p>
-            </div>
-          </div>
+          {/* Image */}
+<div className="rounded-3xl overflow-hidden shadow-lg border border-marble lg:order-first">
+  <img
+    src="https://github.com/SamCreativeData/fernhardts_masonry/blob/main/public/Logo%20Square%20BW.png?raw=true" // place your image in /public/about-photo.jpg
+    alt="Fernhardt's Masonry team at work"
+    className="w-full h-full object-cover"
+  />
+</div>
         </div>
       </div>
     </section>
