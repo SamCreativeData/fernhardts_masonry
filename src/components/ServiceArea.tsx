@@ -65,18 +65,17 @@ const ServiceArea = () => {
             </div>
           </div>
 
-          {/* Map Placeholder */}
-          <div className="bg-marble-texture rounded-3xl p-12 flex items-center justify-center min-h-[500px] border border-marble shadow-lg">
-            <div className="text-center">
-              <MapPin className="h-20 w-20 text-silver mx-auto mb-6" />
-              <h3 className="text-2xl font-semibold text-stone mb-3">Service Area Map</h3>
-              <p className="text-stone/70">
-                Interactive map showing our service coverage area
-              </p>
-              <p className="text-sm text-stone/50 mt-3">
-                TODO: Replace with interactive map component
-              </p>
-            </div>
+          {/* Embedded Map */}
+          <div className="rounded-3xl overflow-hidden shadow-lg border border-marble min-h-[500px]">
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1fqHI-CaZhICIfVmluVodYGqnyJj4OCI&ehbc=2E312F"
+              width="100%"
+              height="500"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title="Fernhardt's Masonry Service Area Map"
+            />
           </div>
         </div>
       </div>
