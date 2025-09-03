@@ -95,11 +95,11 @@ const Contact = () => {
             </div>
 
 {/* Static Map Image */}
-<div className="rounded-3xl overflow-hidden shadow-lg border border-marble min-h-[50px]">
+<div className="rounded-2xl overflow-hidden shadow-md border border-marble max-w-sm">
   <img
-    src="/locationmap.jpg" // 
+    src="/locationmap.jpg"
     alt="Fernhardt's Masonry Service Area"
-    className="w-full h-full object-cover"
+    className="w-full object-cover"
     loading="lazy"
   />
 </div>
