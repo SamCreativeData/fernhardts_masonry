@@ -94,17 +94,22 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Static Map Image */}
-              <div className="flex justify-end">
-              <div className="rounded-2xl overflow-hidden shadow-md border border-marble max-w-xs">
-              <img
-              src="/locationmap.jpg"
-              alt="Fernhardt's Masonry Service Area"
-              className="w-full h-auto object-cover"
-              loading="lazy"
-              />
-          </div>
-          </div>
+            {/* Location Section */}
+<div className="pt-6 border-t border-marble">
+  <h4 className="font-semibold text-charcoal flex items-center gap-3 text-lg mb-3">
+    <MapPin className="h-6 w-6 text-silver" />
+    Located in Vancouver
+  </h4>
+  <div className="rounded-2xl overflow-hidden shadow-md border border-marble w-full">
+    <img
+      src="/locationmap.jpg"
+      alt="Fernhardt's Masonry Service Area"
+      className="w-full h-64 object-cover md:h-80 lg:h-96"
+      loading="lazy"
+    />
+  </div>
+</div>
+
             
           </div>
         </div>
