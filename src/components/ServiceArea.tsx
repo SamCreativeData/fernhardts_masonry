@@ -68,7 +68,7 @@ const ServiceArea = () => {
          {/* Static Map Image */}
           <div className="rounded-3xl overflow-hidden shadow-lg border border-marble min-h-[500px]">
           <img
-            src="/public/service area.png" // place your static image in /public/service-area-map.jpg
+            src="/service area.png" // place your static image in /public/service-area-map.jpg
             alt="Fernhardt's Masonry Service Area"
             className="w-full h-full object-cover"
             loading="lazy"
