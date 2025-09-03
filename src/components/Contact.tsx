@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Phone, Mail, Clock, MapPin, Send } from 'lucide-react';
 import ObfuscatedContact from './ObfuscatedContact';
 import SimpleContactForm from './SimpleContactForm';
 
+// Feature flag (Vite env var)
+const SHOW_LIVE_FORM = import.meta.env.VITE_SHOW_LIVE_FORM === 'true';
+
 const Contact = () => {
   // Obfuscated contact values - Base64 encoded and chunked
-  // Phone: (672) 513-6173 -> Base64 -> chunked
-  const phoneB64 = "KDY3MikgNTEzLTYxNzM=";
-  // Email: fernhardts.masonry@gmail.com -> Base64 -> chunked  
-  const emailB64 = "ZmVybmhhcmR0cy5tYXNv.bnJ5QGdtYWlsLmNvbQ==";
+  const phoneB64 = "KDY3MikgNTEzLTYxNzM="; // (672) 513-6173
+  const emailB64 = "ZmVybmhhcmR0cy5tYXNv.bnJ5QGdtYWlsLmNvbQ=="; // fernhardts.masonry@gmail.com
 
   return (
     <section id="contact" className="py-20 lg:py-24 bg-white">
@@ -23,16 +24,78 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
-          <SimpleContactForm />
+          {/* LEFT: Live form or Preview (based on feature flag) */}
+          {SHOW_LIVE_FORM ? (
+            <SimpleContactForm />
+          ) : (
+            <div className="rounded-3xl p-8 border border-marble shadow-card bg-white">
+              <div className="mb-6">
+                <h3 className="text-3xl font-semibold text-charcoal">Secure Contact Form</h3>
+                <p className="text-stone mt-2">
+                  The form is being finalized. In the meantime, please call or email us using the contact details on the right.
+                </p>
+              </div>
 
-          {/* Contact Information */}
+              <div className="mb-6 rounded-xl border border-amber-300 bg-amber-50 p-4 text-amber-900">
+                Form coming soon — thanks for your patience!
+              </div>
+
+              {/* Disabled preview fields */}
+              <form className="space-y-5" aria-disabled="true">
+                <fieldset disabled className="space-y-5">
+                  <div>
+                    <label className="block text-sm font-medium text-charcoal">Full Name *</label>
+                    <input
+                      className="mt-1 w-full rounded-md border px-3 py-2 bg-gray-100 text-gray-500"
+                      placeholder="Your full name"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-charcoal">Email Address *</label>
+                    <input
+                      type="email"
+                      className="mt-1 w-full rounded-md border px-3 py-2 bg-gray-100 text-gray-500"
+                      placeholder="you@example.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-charcoal">Phone (optional)</label>
+                    <input
+                      className="mt-1 w-full rounded-md border px-3 py-2 bg-gray-100 text-gray-500"
+                      placeholder="(672) 513-6173"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-charcoal">Project Details *</label>
+                    <textarea
+                      rows={5}
+                      className="mt-1 w-full rounded-md border px-3 py-2 bg-gray-100 text-gray-500"
+                      placeholder="Briefly describe your project…"
+                    />
+                  </div>
+
+                  <button
+                    type="button"
+                    className="w-full bg-gray-200 text-gray-500 font-semibold rounded-md px-4 py-3 flex items-center justify-center gap-3 cursor-not-allowed"
+                  >
+                    <Send className="h-5 w-5" />
+                    Send (Coming Soon)
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+          )}
+
+          {/* RIGHT: Contact info + map */}
           <div className="space-y-8">
             <div>
               <h3 className="text-3xl font-semibold text-charcoal mb-8">
                 Contact Information
               </h3>
-              
+
               <div className="space-y-8">
                 <div className="space-y-3">
                   <h4 className="font-semibold text-charcoal flex items-center gap-3 text-lg">
@@ -83,33 +146,30 @@ const Contact = () => {
             {/* Anti-scraping notice */}
             <div className="mt-8 p-6 bg-stone/5 rounded-xl border border-marble">
               <p className="text-sm text-charcoal">
-                <strong>Privacy Protection:</strong> Our contact information is protected against automated scraping. 
-                Click "Reveal\" buttons above to view our phone and email, or use the secure contact form.
+                <strong>Privacy Protection:</strong> Our contact information is protected against automated scraping.
+                Click &quot;Reveal&quot; buttons above to view our phone and email, or use the contact details provided.
               </p>
             </div>
 
             <div className="mt-6">
               <p className="text-sm text-stone/70 mb-4">
-                Prefer forms? Use the secure contact form above—protected with honeypot and time-trap anti-spam measures.
+                Prefer direct contact? Call or email using the details above.
               </p>
             </div>
 
- 
-            {/* Static Map Image */}
-<div className="rounded-2xl overflow-hidden shadow-md border border-marble max-w-sm">
-   <h4 className="font-semibold text-charcoal flex items-center gap-3 text-lg mb-3">
-    <MapPin className="h-6 w-6 text-silver" />
-    Located in Vancouver
-  </h4>
-  <img
-    src="/locationmap.jpg"
-    alt="Fernhardt's Masonry Service Area"
-    className="w-full object-cover"
-    loading="lazy"
-  />
-</div>
-
-            
+            {/* Location / Map image */}
+            <div className="rounded-2xl overflow-hidden shadow-md border border-marble max-w-sm">
+              <h4 className="font-semibold text-charcoal flex items-center gap-3 text-lg mb-3">
+                <MapPin className="h-6 w-6 text-silver" />
+                Located in Vancouver
+              </h4>
+              <img
+                src="/locationmap.jpg"
+                alt="Fernhardt's Masonry Service Area"
+                className="w-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>
