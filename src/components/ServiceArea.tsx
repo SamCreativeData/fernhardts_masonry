@@ -65,18 +65,16 @@ const ServiceArea = () => {
             </div>
           </div>
 
-          {/* Embedded Map */}
+         {/* Static Map Image */}
           <div className="rounded-3xl overflow-hidden shadow-lg border border-marble min-h-[500px]">
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1fqHI-CaZhICIfVmluVodYGqnyJj4OCI&ehbc=2E312F"
-              width="100%"
-              height="500"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              title="Fernhardt's Masonry Service Area Map"
+          <img
+            src="/public/service area.png" // place your static image in /public/service-area-map.jpg
+            alt="Fernhardt's Masonry Service Area"
+            className="w-full h-full object-cover"
+            loading="lazy"
             />
           </div>
+
         </div>
       </div>
     </section>
