@@ -94,16 +94,17 @@ const Contact = () => {
               </p>
             </div>
 
-{/* Static Map Image */}
-<div className="rounded-2xl overflow-hidden shadow-md border border-marble max-w-sm">
-  <img
-    src="/locationmap.jpg"
-    alt="Fernhardt's Masonry Service Area"
-    className="w-full object-cover"
-    loading="lazy"
-  />
-</div>
-
+            {/* Static Map Image */}
+              <div className="flex justify-end">
+              <div className="rounded-2xl overflow-hidden shadow-md border border-marble max-w-xs">
+              <img
+              src="/locationmap.jpg"
+              alt="Fernhardt's Masonry Service Area"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+              />
+          </div>
+          </div>
             
           </div>
         </div>
