@@ -94,19 +94,17 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-marble-texture rounded-3xl p-12 flex items-center justify-center min-h-[300px] border border-marble shadow-lg">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-silver mx-auto mb-4" />
-                <h4 className="text-xl font-semibold text-stone mb-3">Location Map</h4>
-                <p className="text-stone/70 text-sm">
-                  Interactive map showing our office location
-                </p>
-                <p className="text-xs text-stone/50 mt-2">
-                  TODO: Replace with Google Maps embed
-                </p>
-              </div>
-            </div>
+{/* Static Map Image */}
+<div className="rounded-3xl overflow-hidden shadow-lg border border-marble min-h-[200px]">
+  <img
+    src="/locationmap.jpg" // 
+    alt="Fernhardt's Masonry Service Area"
+    className="w-full h-full object-cover"
+    loading="lazy"
+  />
+</div>
+
+            
           </div>
         </div>
       </div>
