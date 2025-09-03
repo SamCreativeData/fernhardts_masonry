@@ -95,7 +95,7 @@ const Contact = () => {
             </div>
 
 {/* Static Map Image */}
-<div className="rounded-3xl overflow-hidden shadow-lg border border-marble min-h-[200px]">
+<div className="rounded-3xl overflow-hidden shadow-lg border border-marble min-h-[50px]">
   <img
     src="/locationmap.jpg" // 
     alt="Fernhardt's Masonry Service Area"
